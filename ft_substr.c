@@ -6,7 +6,7 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 12:09:35 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/04/22 10:40:44 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/04/22 10:42:50 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (p);
 	}
 	p = malloc(len + 1);
-	if (p == NULL ||s == NULL)
+	if (p == NULL || s == NULL)
 		return (NULL);
 	while (i < len)
 	{
