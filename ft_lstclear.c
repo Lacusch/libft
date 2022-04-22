@@ -6,13 +6,13 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 11:28:27 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/04/20 14:35:34 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/04/22 10:07:49 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+static void	delete_node(t_list *lst, void (*del)(void*))
 {
 	if (lst == NULL)
 		return ;
@@ -31,9 +31,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	while ((*lst)->next != NULL)
 	{
 		temp = (*lst)->next;
-		ft_lstdelone (*lst, del);
+		delete_node (*lst, del);
 		*lst = temp;
 	}
-	ft_lstdelone (*lst, del);
+	delete_node (*lst, del);
 	*lst = NULL;
 }
