@@ -1,16 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 14:30:31 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/03/31 10:23:45 by slaszlo-         ###   ########.fr       */
+/*   Created: 2022/03/30 10:48:49 by slaszlo-          #+#    #+#             */
+/*   Updated: 2022/04/04 16:52:58 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+char	*ft_strchr(const char *s, int c)
 {
-	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
+	while (*s != (char) c)
+	{
+		if (!*s++)
+		{
+			return (NULL);
+		}
+	}
+	return ((char *)s);
 }

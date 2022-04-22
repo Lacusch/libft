@@ -1,16 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 14:30:31 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/03/31 10:23:45 by slaszlo-         ###   ########.fr       */
+/*   Created: 2022/04/12 15:37:36 by slaszlo-          #+#    #+#             */
+/*   Updated: 2022/04/12 15:45:54 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
 {
-	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
+	if (s != NULL)
+	{
+		write (fd, s, ft_strlen(s));
+	}
 }

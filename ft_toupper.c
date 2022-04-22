@@ -6,11 +6,9 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 16:15:16 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/03/29 12:49:06 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/03/31 10:22:53 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_toupper(int c)
 {

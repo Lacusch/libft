@@ -1,16 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 14:30:31 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/03/31 10:23:45 by slaszlo-         ###   ########.fr       */
+/*   Created: 2022/04/05 09:04:25 by slaszlo-          #+#    #+#             */
+/*   Updated: 2022/04/05 11:53:42 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_atoi(char *str)
 {
-	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
+	int	c;
+	int	operator;
+	int	out;
+
+	c = 0;
+	operator = 1;
+	out = 0;
+	while ((str[c] >= '\t' && str[c] <= '\r') || str[c] == ' ')
+		c++;
+	if (str[c] == '+' || str[c] == '-')
+	{
+		if (str[c] == '-')
+			operator = -operator;
+		c++;
+	}
+	while (str[c] >= '0' && str[c] <= '9')
+	{
+		out = (str[c] - '0') + (out * 10);
+		c++;
+	}
+	return (out * operator);
 }

@@ -1,16 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 14:30:31 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/03/31 10:23:45 by slaszlo-         ###   ########.fr       */
+/*   Created: 2022/03/31 16:37:15 by slaszlo-          #+#    #+#             */
+/*   Updated: 2022/04/01 11:46:49 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
+	size_t	i;
+	size_t	c;
+
+	i = ft_strlen(dst);
+	c = 0;
+	if (dstsize <= i)
+		return (dstsize + ft_strlen(src));
+	while (src[c] != '\0' && i + c + 1 < dstsize)
+	{
+		dst[i + c] = src[c];
+		c++;
+	}
+	dst[i + c] = '\0';
+	return (ft_strlen(dst) + ft_strlen(&src[c]));
 }

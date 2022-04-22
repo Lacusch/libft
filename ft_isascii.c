@@ -6,15 +6,11 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 11:04:27 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/03/29 16:52:05 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/03/31 10:27:14 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	return (c >= 0 && c <= 127);
 }

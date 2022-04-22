@@ -1,16 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 14:30:31 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/03/31 10:23:45 by slaszlo-         ###   ########.fr       */
+/*   Created: 2022/04/12 15:58:54 by slaszlo-          #+#    #+#             */
+/*   Updated: 2022/04/12 16:16:57 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+void	ft_putnbr_fd(int n, int fd)
 {
-	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
+	long	nb;
+
+	nb = n;
+	if (nb < 0)
+	{
+		nb = nb * -1;
+		ft_putchar_fd ('-', fd);
+	}
+	if (nb > 9)
+	{
+		ft_putnbr_fd((nb / 10), fd);
+		ft_putchar_fd((nb % 10 + '0'), fd);
+	}
+	else
+		ft_putchar_fd((nb + '0'), fd);
 }

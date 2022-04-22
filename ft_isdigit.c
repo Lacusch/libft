@@ -6,15 +6,11 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 13:44:14 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/03/30 10:18:02 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/03/31 10:45:28 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	return (c >= '0' && c <= '9');
 }
