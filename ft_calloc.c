@@ -6,7 +6,7 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 14:55:13 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/04/04 15:13:04 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/04/25 09:38:06 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_calloc(size_t count, size_t size)
 
 	i = 0;
 	p = (char *)malloc (size * count);
+	if ((size && SIZE_MAX/size < count) || p == NULL)
+		return NULL;
 	while (i < count * size)
 	{
 		p[i] = '\0';
