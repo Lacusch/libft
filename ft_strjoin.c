@@ -6,7 +6,7 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 11:16:06 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/04/05 15:13:13 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/04/25 09:51:55 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@ char	*ft_strjoin(char const	*s1, char const	*s2)
 
 	i = 0;
 	i2 = 0;
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	p = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
 	if (p == NULL)
-		return (0);
+		return (NULL);
 	while (i < ft_strlen(s1) + ft_strlen(s2))
 	{
 		while (i < ft_strlen(s1))
