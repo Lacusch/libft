@@ -6,7 +6,7 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 15:18:09 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/04/06 11:31:58 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/04/25 10:33:11 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	e;
 
 	s = 0;
+	if (s1 == NULL)
+		return (NULL);
 	while (s1[s] && ft_trim(s1[s], set))
 		s++;
 	e = ft_strlen(s1);
