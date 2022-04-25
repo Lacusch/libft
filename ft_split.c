@@ -6,7 +6,7 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 11:34:50 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/04/14 13:38:11 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/04/25 16:45:14 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static	int	word_count(char const *s, char c)
 	int	i;
 
 	i = 0;
-	word_count = 1;
+	word_count = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] == c && s[i + 1] != c)
@@ -56,7 +56,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	str_start = -1;
-	while (i <= ft_strlen(s))
+	while ((i <= ft_strlen(s)) && j <= word_count(s, c))
 	{
 		if (s[i] != c && str_start < 0)
 			str_start = i;
