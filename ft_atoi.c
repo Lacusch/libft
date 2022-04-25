@@ -6,7 +6,7 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 09:04:25 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/04/05 11:53:42 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/04/25 09:35:16 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,11 @@ int	ft_atoi(char *str)
 	c = 0;
 	operator = 1;
 	out = 0;
-	while ((str[c] >= '\t' && str[c] <= '\r') || str[c] == ' ')
+	while ((str[c] >= '\t' && str[c] <= '\r') || str[c] == ' '
+		|| str[c] == '\n' || str[c] == '\v' || str[c] == '\f')
+	{
 		c++;
+	}
 	if (str[c] == '+' || str[c] == '-')
 	{
 		if (str[c] == '-')
