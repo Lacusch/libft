@@ -6,7 +6,7 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 14:54:45 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/03/31 15:18:35 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/04/25 08:36:01 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,13 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t			i;
 	unsigned char	*tempd;
 	unsigned char	*temps;
-
+	
+	i = 0;
 	tempd = (unsigned char *)dst;
 	temps = (unsigned char *)src;
-		i = 0;
+	;
+	if (dst == NULL && src == NULL)
+		return (NULL);
 	while (i < n)
 	{
 	tempd[i] = temps[i];
