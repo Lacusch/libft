@@ -6,28 +6,30 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 11:34:50 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/04/25 16:45:14 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/04/25 18:12:41 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	word_count(char const *s, char c)
+static int	word_count(char const *str, char sep)
 {
-	int	word_count;
 	int	i;
+	int	count;
 
-	i = 0;
-	word_count = 0;
-	while (s[i] != '\0')
+	if (str == 0 || str[0] == 0)
+		return (0);
+	i = 1;
+	count = 0;
+	if (str[0] != sep)
+		count++;
+	while (str[i] != '\0')
 	{
-		if (s[i] == c && s[i + 1] != c)
-		{
-			word_count++;
-		}
+		if (str[i] != sep && str[i - 1] == sep)
+			count++;
 		i++;
 	}
-	return (word_count);
+	return (count);
 }
 
 static	char	*word_dub(char const *s, int start, int end)
