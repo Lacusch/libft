@@ -6,13 +6,13 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 12:22:43 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/08/03 20:48:35 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/08/04 06:55:31 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# endif
+
 // For libf
 # include <stdlib.h>
 # include <unistd.h>
@@ -76,7 +76,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 // Printf
-int	ft_printf(const char *s, ...);
+int		ft_printf(const char *s, ...);
 
 char	*get_next_line(int fd);
 
@@ -87,3 +87,5 @@ int		is_new_line(char *str);
 size_t	ft_strlen(const char *s);
 int		has_str_nl(const char *s);
 char	*move_str(char *dest, char *src, size_t len);
+
+#endif

@@ -6,15 +6,15 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 16:39:41 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/08/03 20:46:55 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/08/04 06:53:53 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 5
-# endif
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE 5
+#endif
 
 char	*get_next_line(int fd)
 {

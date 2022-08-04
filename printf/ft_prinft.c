@@ -6,7 +6,7 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 11:23:05 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/08/03 22:33:58 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/08/04 06:50:59 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	ft_process_str(va_list ap, char c)
 	if (c == 'c')
 		ft_putchar_fd((char)va_arg(ap, int), 1);
 	if (c == 's')
-		ft_putstr_fd(va_arg (ap, char*), 1);
+		ft_putstr_fd(va_arg (ap, char *), 1);
 	if (c == 'p' || c == 'x' || c == 'X')
 	{
 		ft_putstr_fd("0x", 1);
