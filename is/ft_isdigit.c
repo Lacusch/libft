@@ -6,11 +6,13 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 13:44:14 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/03/31 10:45:28 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/08/24 12:08:44 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+int	ft_isdigit(char c)
 {
-	return (c >= '0' && c <= '9');
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }
