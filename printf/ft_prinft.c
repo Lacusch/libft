@@ -27,7 +27,7 @@ void	ft_put_hex(unsigned long number, char c, int fd)
 {
 	if (number < 10)
 		ft_putnbr_fd(number, 1);
-	else if (number <= 16 & c == 'x' || c == 'X')
+	else if ((number <= 16) & (c == 'x' || c == 'X'))
 		ft_putnbr_fd('a' + (number - 10), 1);
 	else if (number <= 16 && c == 'X')
 		ft_putnbr_fd('A' + (number - 10), 1);

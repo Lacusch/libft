@@ -12,6 +12,9 @@
 
 #include "../libft.h"
 
+#ifndef _linux_
+	#include <stdint.h>
+#endif
 void	*ft_calloc(size_t count, size_t size)
 
 {
