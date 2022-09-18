@@ -6,15 +6,13 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 14:55:13 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/08/03 21:13:05 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/09/18 06:43:48 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+#include <stdint.h>
 
-#ifndef _linux_
-	#include <stdint.h>
-#endif
 void	*ft_calloc(size_t count, size_t size)
 
 {
