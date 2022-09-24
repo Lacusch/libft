@@ -6,7 +6,7 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 12:22:43 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/08/04 06:55:31 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/09/24 13:44:40 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,4 +88,10 @@ size_t	ft_strlen(const char *s);
 int		has_str_nl(const char *s);
 char	*move_str(char *dest, char *src, size_t len);
 
+// Functions added later:
+
+/*
+Puts a long number to the given file descriptor
+*/
+void	ft_put_longnb_fd(long n, int fd);
 #endif
