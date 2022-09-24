@@ -14,7 +14,8 @@ SOURCE = is/ft_isalnum.c is/ft_isalpha.c is/ft_isascii.c is/ft_isdigit.c is/ft_i
 		lst/ft_lstadd_back.c lst/ft_lstadd_front.c lst/ft_lstclear.c lst/ft_lstdelone.c\
 		lst/ft_lstiter.c lst/ft_lstlast.c lst/ft_lstmap.c lst/ft_lstnew.c lst/ft_lstsize.c\
 		printf/ft_prinft.c\
-		gnl/get_next_line.c gnl/get_next_line_utils.c
+		gnl/get_next_line.c gnl/get_next_line_utils.c\
+		put/ft_put_longnb_fd.c
 
 OBJECT = $(SOURCE:.c=.o)
 all: ${NAME}
