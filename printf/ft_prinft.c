@@ -6,7 +6,7 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 11:23:05 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/08/04 06:50:59 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/09/24 13:46:39 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ void	ft_process_str(va_list ap, char c)
 	}
 	if (c == 'd' || c == 'i')
 		ft_putnbr_fd(va_arg(ap, int), 1);
+	if (c == 'l')
+		ft_put_longnb_fd(va_arg(ap, long), 1);
 	if (c == 'u')
 		ft_put_un_nbr_fd(va_arg(ap, unsigned int), 1);
 	if (c == '%')
