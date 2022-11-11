@@ -6,13 +6,16 @@
 /*   By: slaszlo- <slaszlo-@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 12:22:43 by slaszlo-          #+#    #+#             */
-/*   Updated: 2022/09/24 13:44:40 by slaszlo-         ###   ########.fr       */
+/*   Updated: 2022/11/11 11:05:16 by slaszlo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1000
+# endif
 // For libf
 # include <stdlib.h>
 # include <unistd.h>
